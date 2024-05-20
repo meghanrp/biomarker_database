@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Biomarker Biological Database</title>
+    <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/final.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/final.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+</head>
+
+<canvas></canvas>
+<body id="main">
+
+    <img src='img/molecule.png' title="left"/>
+
+    <h1 class="title">Biological Biomarker Database</h1>
+
+    <div class="about">
+        <p>The Biological Biomarker Database is a manually curated database of bioactive molecules with pharmacological relevance. The database combines gene, protein, drug, and structural properties related to each biomarker to aid in the analysis and future research on new drugs and disease pathology.</p>
+    </div>
+        <img src='img/Myoglobin_img.png' title="center"/>
+    
+    <div class="explore">
+        <p>Explore The Database</p>
+        <img src="img/benzene.png" title="right" />
+    </div>
+
+    <form name="biomarker_search" id="biomarker_search" action="">
+        <input name="search_query" id="search_query" type="search" value="" autofocus="autofocus" placeholder="Enter the biomarker symbol here! e.g. BRAF" class="ui-autocomplete-input"/>
+        <input name="submit" type="submit" id="submit" value="Submit">
+    </form>
+        <section id='results'>
+            <p class="matches">
+                <span id="match_count">0</span> Biomarker(s) Found!
+            </p>
+            <table class="table_info">
+                <thead>
+                    <tr class="table_headers">
+                        <td>Biomarker</td>
+                        <td class="gene">Gene</td>
+                        <td class="protein">Protein Name</td>
+                        <td id="sequence">Protein Sequence</td>
+                        <td class="drug">Drug Name</td>
+                        <td class="canonical">Canonical SMILES</td>
+                        <td class="drugSVG">Drug Structure</td>
+                        <td class="disease">Disease/Research Area</td>
+                 </tr>
+                        </thead>
+                <tbody id="myTable">
+
+                </tbody>
+        </section>
+</body>
+<footer>
+    <div class="footer">
+        <p class="footer">Interested In Learning More? More Resources Available Here:</p>
+        <a class="resources" href="https://www.ncbi.nlm.nih.gov/genbank/">GenBank</a>
+        <a class="resources" href="https://www.ebi.ac.uk/chembl/">ChEMBL</a>
+        <a class="resources" href="https://www.uniprot.org/">UniProt</a>
+        <a class="resources" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>
+        <a class="resources" href="https://go.drugbank.com/">DrugBank</a>
+    </div></footer>
+</html>
