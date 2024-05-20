@@ -1,0 +1,249 @@
+img[title="left"] {
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 16px;
+    left: 4px;
+}
+
+
+.title {
+    color:#0e1329;
+    font-family: Palatino;
+    position: absolute;
+    top: 0.9px;
+    left: 65px;
+    font-size: 40px;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+img[title="right"] {
+    display: block;
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    left: 198px;
+    top: 435px;
+    animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.about {
+    color: black;
+    font-family: Tahoma;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.explore {
+    color: black;
+    font-family: Tahoma;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+img[title="center"]{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
+    -webkit-animation: spin 6s linear infinite;
+    -moz-animation: spin 6s linear infinite;
+    animation: spin 6s linear infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    width: 150 px;
+    height: 300 px;
+    border: 5px solid black;
+    border-radius: 25px;
+}
+
+.input-options {
+    text-align: center;
+}
+
+.options {
+    text-align: center;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #82e4eb;
+    background: -moz-radial-gradient(center, ellipse cover, #ffa2b0 0%, #82e4eb 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #ffa2b0), color-stop(100%, #82e4eb));
+    background: -webkit-radial-gradient(center, ellipse cover, #ffa2b0 0%, #82e4eb 100%);
+    background: -o-radial-gradient(center, ellipse cover, #ffa2b0 0%, #82e4eb 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #ffa2b0 0%, #82e4eb 100%);
+    background: radial-gradient(ellipse at center, #ffa2b0 0%, #82e4eb 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa2b0', endColorstr='#82e4eb', GradientType=1);
+    overflow: scroll;
+    min-height: 100%;
+    position: relative;
+}
+
+
+footer {
+    position: absolute;
+    padding: 25px;
+    color: #000;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+}
+
+.input-options {
+    display: inline;
+    margin-left: 5px;
+    color: black;
+}
+
+input[type=search]{
+    font-family: Tahoma;
+    background: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 10px 24px;
+    width: 300px;
+}
+
+input[type=submit]{
+    font-family: Tahoma;
+    background: white;
+    color: black;
+    border-style: outset;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 10px 24px;
+    transition-duration: 0.4s;
+}
+
+input[type=submit]:hover{
+    background-color: #FF0072;
+    color: white;
+}
+
+section#results {
+    display: none;
+}
+
+.matches {
+    font-family: Tahoma;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    position: relative;
+    cursor: default;
+}
+
+table, th, thead, td{
+    border: 1px solid black;
+}
+
+tbody {
+    font-family:Tahoma;
+}
+
+thead tr td {
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 15px;
+    width: 20px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    transition: 0.3s ease all;
+    border: 3px solid #FF0072;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+thead tr td:hover {
+    color: #000;
+}
+
+thead tr td:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #FF0072;
+    z-index: 1;
+}
+
+thead tr td:hover:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+a:link, a:visited{
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+}
+
+a:hover {
+    font-size: 15px;
+    text-decoration: underline;
+    color: #FF0072;
+    text-decoration: underline;
+}
+
+a:active {
+    font-size: 15px;
+    text-decoration: underline;
+    color: black;
+    text-decoration: underline;
+}
+
+.footer {
+    display: inline-block;
+    font-family: Tahoma;
+}
